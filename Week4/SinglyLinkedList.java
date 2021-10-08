@@ -26,6 +26,5 @@ public class SinglyLinkedList {
             System.out.println(p.data);
             p = p.next;
         }
-
     }
 }
