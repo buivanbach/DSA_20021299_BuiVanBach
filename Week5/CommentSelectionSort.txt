@@ -1,0 +1,1 @@
+Cùng với 1 dữ liệu , dù cho đảo các thứ tự như nào thì thời gian chạy của Selection sort vẫn như nhau
