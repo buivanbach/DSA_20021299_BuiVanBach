@@ -3,7 +3,7 @@ package Week5;
 import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.StdIn;
 
-public class BalancedBrackets {
+public class    BalancedBrackets {
     public static String isBalanced(String s) {
         Stack<Character> solution = new Stack<>();
         solution.push(s.charAt(0));
