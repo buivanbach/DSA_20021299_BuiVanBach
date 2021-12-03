@@ -1,7 +1,12 @@
 package Week5;
 
+import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdRandom;
 
+import java.util.Scanner;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class SelectionSort {
@@ -11,10 +16,10 @@ public class SelectionSort {
         a[i] = temp;
     }
 
-    public static void SecSort(int[] a) {
-        for (int i = 0; i < a.length; i++) {
+    public static void selectionSort(int[] a) {
+        for (int i = 1; i < a.length-1; i++) {
             int min = i ;
-            for (int j = i + 1; j < a.length; j++) {
+            for (int j = i + 1; j < a.length-1; j++) {
                 if (a[min] > a[j]) {
                     min = j;
                 }
@@ -25,26 +30,16 @@ public class SelectionSort {
         }
     }
 
-    public static void printArr(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-        }
-        System.out.println();
-    }
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++) {
-            a[i] = (int) StdRandom.uniform(i+1);
-        }
-        printArr(a);
-        long start = System.currentTimeMillis();
 
-        SecSort(a);
-        long end = System.currentTimeMillis();
-        printArr(a);
-        System.out.println("Start "+start+", End " + end );
+        int n = StdIn.readInt();
+        int [] arr = new int[n];
+        for(int i = 0 ; i< n;i++){
+            arr[i] = StdIn.readInt();
+        }
+        selectionSort(arr);
+        for(int i = 0 ; i < n;i++){
+            System.out.print(arr[i]+" ");
+        }
     }
 }
